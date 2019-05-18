@@ -7,8 +7,8 @@ const db = require('./db.js');
 
 
 app.use(bodyparser.json());
-app.use(express.static(__dirname + '/../client/public'));
-app.use(express.static(__dirname + '/../client/dist'));
+app.use(express.static(__dirname + '/../public'));
+
 
 
 app.get('/description', function(req, res) {
