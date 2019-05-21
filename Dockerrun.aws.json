@@ -1,0 +1,13 @@
+{
+    "AWSEBDockerrunVersion": "1",
+    "Image": {
+      "Name": "mariajosenavac/description-module",
+      "Update": "true"
+    },
+    "Ports": [
+      {
+        "ContainerPort": "1128"
+      }
+    ],
+    "Logging": "/var/log/nginx"
+  }
