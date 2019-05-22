@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
+import ProductDescription from './description.jsx';
+import GeneralInfo from './generalInfo.jsx';
 import axios from 'axios';
 
 
@@ -7,7 +9,7 @@ class Description extends Component {
   constructor(props){
     super(props)
     this.state = {
-      product_description: {},
+      productInfo: {},
     }
   }
 
@@ -18,7 +20,7 @@ class Description extends Component {
     })
     .then(description => {
       this.setState({
-          product_description: description
+          productInfo: description,
       })
     console.log(description);
     
@@ -31,7 +33,8 @@ class Description extends Component {
   render() {
     return (
       <>
-        <p>{this.state.product_description.name}</p>
+        <GeneralInfo productInfo = {this.state.productInfo} />
+        <ProductDescription productDescription= {this.state.productInfo.description} id={this.state.productInfo._id}/>
       </>
     )
   }
