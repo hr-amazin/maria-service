@@ -2,9 +2,11 @@ import React from 'react';
 
 const Delivery = ({delivery}) =>  {
   return (
-    <>
-      <div>{delivery}</div>        
-    </>
+    <div>
+      <div>Free Delivery
+        <b>{delivery}</b>
+      </div>        
+    </div>
   ) 
 }
 

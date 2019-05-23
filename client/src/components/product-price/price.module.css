@@ -1,0 +1,55 @@
+.iconImage {
+  background-image: url(https://m.media-amazon.com/images/G/01/AUIClients/AmazonUIIcon@legacyImages-sprite_2x-13acd72bb22e0c502de00d0afe21c494871da686._V2_.png);
+  background-size: 400px 900px;
+  height: 15px;
+  width: 54px;
+  display: inline-block;
+  vertical-align: top;
+  background-position: -5px -490px;
+  vertical-align: baseline;
+}
+
+.listMoneyPrice {
+  color: #555;
+  font-size: 13px;
+  text-align: left;
+  text-decoration: line-through;
+  font-family: Arial, sans-serif;
+}
+
+.moneyPrice {
+  text-align: left;
+  line-height: 1.225;
+  font-size: 17px;
+  color:  #B12704;
+  text-rendering: optimizeLegibility;
+  font-family: Arial, sans-serif;
+}
+.price {
+  text-align: right;
+}
+
+.primeRegard {
+  color: #555;
+  font-size: 13px;
+  margin-left: 10px;
+  font-family: Arial, sans-serif;
+
+}
+
+.savePrice {
+  color: #B12704;
+  font-size: 13px;
+  text-align: left;
+  font-family: Arial, sans-serif;
+}
+
+.category {
+  color: #555;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+}
+
+.table {
+  margin-top: 10px;
+}
