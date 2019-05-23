@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
-import ProductDescription from './description.jsx';
-import GeneralInfo from './generalInfo.jsx';
+import ProductDescription from './components/product-description/product-description.jsx';
+import GeneralInfo from './components/product-general-info/general-info.jsx';
 import axios from 'axios';
 
 

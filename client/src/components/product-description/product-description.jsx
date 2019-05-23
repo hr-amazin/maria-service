@@ -1,5 +1,5 @@
 import React from 'react';
-import DescriptionItem from './descriptionItem.jsx';
+import DescriptionItem from '../description-item/descriptionItem.jsx';
 
 const ProductDescription = ({id, productDescription = ''}) =>  {
   return (
