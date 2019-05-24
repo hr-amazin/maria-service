@@ -1,11 +1,12 @@
-.container {
-  border-bottom: 1px solid #CCC;
-}
-
 a:hover {
   color: #c45500;
   text-decoration: underline; 
 }
+
+.container {
+  border-bottom: 1px solid #CCC;
+}
+
 .nameLink {
   color: #0066c0;
   margin-left: 2px;
@@ -14,8 +15,8 @@ a:hover {
 
 .provider {
   color: #000000;
-  text-align: left;
   margin-bottom: 0px;  
+  text-align: left; 
 }
 
 .title {
