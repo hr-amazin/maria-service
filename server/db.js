@@ -20,7 +20,7 @@ module.exports.getOne = (callback) => {
     if(err) {
       console.log('there is an error', err);
     } else {
-      collection.findOne(function(err, result) {
+      collection.findOne({_id: 1011},function(err, result) {
         if(err) {
           callback(err);
         } else {
