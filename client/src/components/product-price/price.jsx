@@ -2,9 +2,12 @@ import React from 'react';
 import styles from '../product-price/price.module.css';
 
 const Price = ({price = ''}) =>  {
-  
+  let priceAsNumber = price;
+  console.log(price);
 
-  let priceAsNumber = parseFloat(price.replace(',', ''));
+  if (typeof price === 'string') {
+     priceAsNumber = parseFloat(price.replace(',', ''));
+  }
   
   let percentages = [8, 10, 15, 20];
   let randomIndex = Math.floor(Math.random() * percentages.length);

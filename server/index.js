@@ -4,21 +4,22 @@ const port = 1128;
 const path = require('path');
 const bodyparser = require('body-parser');
 const db = require('./db.js');
+const cors = require('cors');
 
-
+app.use(cors());
 app.use(bodyparser.json());
 app.use(express.static(__dirname + '/../public'));
 
 
 
-app.get('/description', function(req, res) {
-    db.getOne((err, result) => {
+app.get('/description/:id', function(req, res) {
+    let id = req.params.id;
+    db.getOne(parseInt(id), (err, result) => {
       if(err) {
         console.log('ERROR IN SERVER', err);
       } else {
         console.log('Response IN SERVER',result);
         res.send(result);
-        res.end();
       }
     });
     // console.log(req);

@@ -15,12 +15,12 @@ mongoose.connect(`mongodb+srv://${MONGO_USER}:${MONGO_PASSWORD}@${MONGO_URL}`, {
 
 const connect = mongoose.connection;
 
-module.exports.getOne = (callback) => {
+module.exports.getOne = (id, callback) => {
   connect.db.collection('descriptions', (err, collection) => {
     if(err) {
       console.log('there is an error', err);
     } else {
-      collection.findOne({_id: 1011},function(err, result) {
+      collection.findOne({_id: id},function(err, result) {
         if(err) {
           callback(err);
         } else {

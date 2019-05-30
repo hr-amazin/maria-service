@@ -14,7 +14,7 @@ class Description extends Component {
   }
 
   componentDidMount() {
-    axios.get('/description')
+    axios.get(`http://description.us-east-2.elasticbeanstalk.com/description/${1001}`)
     .then(response => {
        return response.data;
     })
@@ -29,18 +29,39 @@ class Description extends Component {
       console.log(err);
     })
   }
+  
+  componentDidUpdate(prevProps) {
+    if(prevProps.id !== this.props.id) {
+      axios.get(`http://description.us-east-2.elasticbeanstalk.com/description/${this.props.id}`)
+      .then(response => {
+        return response.data;
+     })
+     .then(description => {
+       this.setState({
+           productInfo: description,
+       })
+     console.log(description);
+     
+     })
+     .catch(err => {
+       console.log(err);
+     })
+    }
+
+  }
 
   render() {
     return (
       <>
-        <GeneralInfo productInfo = {this.state.productInfo} />
+        <GeneralInfo productInfo = {this.state.productInfo}/>
         <ProductDescription productDescription= {this.state.productInfo.description} id={this.state.productInfo._id}/>
       </>
     )
   }
 }
 
-ReactDOM.render(<Description/>, document.getElementById('description'));
+window.Description = Description;
+// ReactDOM.render(<Description/>, document.getElementById('description'));
 
 
 

@@ -1,8 +1,10 @@
 import React from 'react';
 import styles from '../product-name/name.module.css'
+import StarRatings from '../../../../node_modules/react-star-ratings'
 
-const Name = ({name = ''}) =>  {
+const Name = ({name = '', rating}) =>  {
   let nameLink = name.split(' ');
+  
   return (
     <div className={styles.container}>
       <div className={styles.title}>{name}</div> 
@@ -12,7 +14,17 @@ const Name = ({name = ''}) =>  {
             {nameLink[0]}
           </a>       
         </p>
-      </div>     
+      </div>  
+      <div> <StarRatings 
+      className={styles.ratings}
+      rating = {3.5}
+      starRatedColor="#ffce00"
+      starSpacing=".2px"
+      starDimension="15px"
+      numberOfStars={5}
+      name='rating'
+      /> <a className={styles.reviews} href="#">80 cuestomer reviews</a>
+      </div>   
     </div>
   ) 
 }
