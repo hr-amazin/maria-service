@@ -21,9 +21,7 @@ class Description extends Component {
     .then(description => {
       this.setState({
           productInfo: description,
-      })
-    console.log(description);
-    
+      })   
     })
     .catch(err => {
       console.log(err);
@@ -31,17 +29,17 @@ class Description extends Component {
   }
   
   componentDidUpdate(prevProps) {
-    if(prevProps.id !== this.props.id) {
+    if(prevProps.id !== this.props.id && this.props.id !== "") {
       axios.get(`http://description.us-east-2.elasticbeanstalk.com/description/${this.props.id}`)
       .then(response => {
         return response.data;
      })
      .then(description => {
-       this.setState({
-           productInfo: description,
-       })
-     console.log(description);
-     
+      if(description) {
+        this.setState({
+          productInfo: description,
+        })
+      } 
      })
      .catch(err => {
        console.log(err);

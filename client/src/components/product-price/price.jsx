@@ -3,8 +3,7 @@ import styles from '../product-price/price.module.css';
 
 const Price = ({price = ''}) =>  {
   let priceAsNumber = price;
-  console.log(price);
-
+ 
   if (typeof price === 'string') {
      priceAsNumber = parseFloat(price.replace(',', ''));
   }

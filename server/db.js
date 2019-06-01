@@ -5,7 +5,7 @@ require('dotenv').config();
  const MONGO_PASSWORD = process.env.MONGO_PASSWORD;
  const MONGO_URL = process.env.MONGO_URL;
 
-console.log('hola', MONGO_URL);
+// console.log('hola', MONGO_URL);
 
 
 mongoose.connect(`mongodb+srv://${MONGO_USER}:${MONGO_PASSWORD}@${MONGO_URL}`, { useNewUrlParser: true });
