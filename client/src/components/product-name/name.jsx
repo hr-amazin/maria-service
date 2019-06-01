@@ -17,7 +17,7 @@ const Name = ({name = '', rating}) =>  {
       </div>  
       <div> <StarRatings 
       className={styles.ratings}
-      rating = {3.5}
+      rating = {Math.random() * 5}
       starRatedColor="#ffce00"
       starSpacing=".2px"
       starDimension="15px"
