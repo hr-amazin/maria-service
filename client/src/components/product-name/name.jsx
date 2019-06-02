@@ -23,7 +23,7 @@ const Name = ({name = '', rating}) =>  {
       starDimension="15px"
       numberOfStars={5}
       name='rating'
-      /> <a className={styles.reviews} href="#">80 cuestomer reviews</a>
+      /> <a className={styles.reviews} href="#">{Math.floor(Math.random() * (200 - 10 + 1) + 10)} customer reviews</a>
       </div>   
     </div>
   ) 

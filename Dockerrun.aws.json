@@ -1,7 +1,7 @@
 {
     "AWSEBDockerrunVersion": "1",
     "Image": {
-      "Name": "mariajosenavac/description-module:version9.6",
+      "Name": "mariajosenavac/description-module:version9.8",
       "Update": "true"
     },
     "Ports": [
